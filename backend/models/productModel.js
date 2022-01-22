@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const productSchema = mongoose.Schema({
     name: {
         type: String,
-        require: [true, "please enter product name"],
+        required: [true, "please enter product name"],
         trim: true
     },
     description: {
@@ -12,7 +12,7 @@ const productSchema = mongoose.Schema({
     },
     price: {
         type: Number,
-        required: [true, "please enter the product description"],
+        required: [true, "please enter the product price"],
         maxLength: [8, "price cannot exceed 8 characters"]
     },
     rating: {
